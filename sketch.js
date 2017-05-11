@@ -19,7 +19,7 @@ function draw(){
 
 var Jellyfish = function(){
   //how many tails I want
-  var N = 3;
+  var N = 5;
   
   //only want 1 body
   this.bodypos = createVector( random( 0 , width) , random( 0 , height) );
@@ -75,13 +75,13 @@ var Jellyfish = function(){
       console.log( this.dist2/this.maxDist);
       
       //make the lines thicker
-      strokeWeight( 10 );
+      strokeWeight( 3 );
       //create a bezier from the body to the tail parts
       bezier( this.bodypos.x , this.bodypos.y  , this.midpos[n].x , this.midpos[n].y , this.mid2pos[n].x , this.mid2pos[n].y , this.tailpos[n].x , this.tailpos[n].y);
     }
     fill( this.C1 );
     noStroke();
-    ellipse( this.bodypos.x , this.bodypos.y , 10 );
+    ellipse( this.bodypos.x , this.bodypos.y , 3 );
   };
   
   this.evolve = function(){
